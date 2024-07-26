@@ -12,6 +12,7 @@ struct TestRFApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(NewsViewModel(fetchStoriesUseCase: DefaultFetchStoriesUseCase(repository: DefaultStoriesRepository())))
         }
     }
 }
